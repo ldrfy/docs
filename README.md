@@ -4,9 +4,9 @@
 
 <center>
 <div style="display: flex;">
-    <img src="images/main.png" alt="首页" style="width: 40%;">
-    <img src="images/preference.png" alt="设置1" style="width: 25%;">
-    <img src="images/server-preference.png" alt="设置2" style="width: 25%;">
+    <img src="images/main.png" alt="首页" style="width: 35%;">
+    <img src="images/preference.png" alt="设置1" style="width: 31%;">
+    <img src="images/server-preference.png" alt="设置2" style="width: 31%;">
 </div>
 </center>
 
