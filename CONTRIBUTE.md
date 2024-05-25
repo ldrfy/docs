@@ -56,7 +56,7 @@ make uninstall
 #### pacman
 
 ```bash
-make aur
+make test-aur
 ```
 
 文件生成在 `./disk/*.pkg.tar.zst`
@@ -76,7 +76,7 @@ sudo pacman -S dpkg
 ```
 
 ```bash
-make deb
+make test-deb
 ```
 
 文件生成在 `./disk/*.deb`
