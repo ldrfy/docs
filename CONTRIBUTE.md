@@ -1,14 +1,16 @@
 # 贡献说明
 
-我目前仅在 `archlinux最新版 gnome桌面环境(45)` 开发测试，使用gtk4，不支持旧版
+我目前仅在 `archlinux最新版 gnome桌面环境(46)` 开发测试，使用gtk4，不支持旧版
+
+ubuntu 需要 `23.10` 或 `24.04`
 
 > ！！！尽可能少的依赖第三方库，或者这个库在各个发行版都很普遍也行，尽量不适应过时技术
 
 ## 待完成
 
 - GTK4相关
-    - 如何窗口置顶
-    - 响应剪贴时如何弹出窗口到最上面，而不是显示“已就绪”
+    - 如何窗口置顶，暂时只能手动
+    - 响应剪贴时如何弹出窗口到最上面，而不是显示“已就绪”，暂时非flatpak环境使用x11后端实现
     - 如何优雅的完成全局快捷键（尽量不使用过时的库，比如gtk3的，也不要使用root）
     - 如何优雅的显示状态栏图标（尽量不使用过时的库，比如gtk3的）
 
@@ -16,7 +18,7 @@
     - `wayland` 环境下，不设置 `os.environ["GDK_BACKEND"] = "x11"`，如何复制立刻翻译，而不是鼠标移动到软件窗口才开始翻译
 
 
-- 更多引擎，目前支持百度、谷歌、有道、腾讯，欢迎贡献
+- 更多引擎，目前支持百度、谷歌、必应、腾讯、有道，欢迎贡献
 - 我英语不好，所以开发此项目。软件界面默认英文，有中文翻译，但是文档字太多，我只写中文……，其他人可以翻译文档，包括代码中的注释，也可以翻译
 
 
@@ -27,7 +29,7 @@
 ### 编译工具 meson
 
 ```bash
-sudo pacman -S meson appstream-glib
+sudo pacman -S meson appstream-glib zip
 ```
 
 ### 依赖：
@@ -52,6 +54,8 @@ make uninstall
 ```
 
 ### 打包
+
+以下全部为测试，修改的文件及时生效
 
 #### pacman
 
@@ -96,15 +100,17 @@ sudo dpkg -i ./disk/*.deb
 sudo pacman -S flatpak-builder
 ```
 
+安装依赖
+
 ```bash
-make flatpak
+flatpak install flathub org.gnome.Platform//46 org.gnome.Sdk//46
+```
+
+```bash
+make test-flatpak
 ```
 
 文件生成在 `./disk/*.flatpak`
 
-安装
 
-```bash
-flatpak install ./disk/*.flatpak --user
-```
 
