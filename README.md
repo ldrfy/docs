@@ -55,6 +55,13 @@
 
 - [更新说明](CONTRIBUTE.md)
 
+## 常用资料
+
+- [GNOME 人机界面指南](https://developer.gnome.org/hig/index.html)
+- [GNOME 开发者文档](https://developer.gnome.org/documentation/index.html)
+- [Gtk–4.0](https://docs.gtk.org/)
+  - [Gdk–4.0](https://docs.gtk.org/gdk4/)
+  - [Gio–2.0](https://docs.gtk.org/gio/)
 
 部分代码参考：
 
