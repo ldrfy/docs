@@ -3,10 +3,17 @@
 此为[ldr-translate](https://github.com/yuhldr/ldr-translate) 重构版， [ldr-translate](https://github.com/yuhldr/ldr-translate) 还能用，但是不再更新，旧系统可以使用它，还是挺好用的，但是我喜欢挑战新技术。
 
 <center>
+gtk 版本
 <div style="display: flex;">
     <img src="images/main.png" alt="首页" style="width: 35%;">
     <img src="images/preference.png" alt="设置1" style="width: 31%;">
     <img src="images/server-preference.png" alt="设置2" style="width: 31%;">
+</div>
+qt 版本
+<div style="display: flex;">
+    <img src="images/qt/main.png" alt="首页" style="width: 36%;">
+    <img src="images/qt/preference.png" alt="设置1" style="width: 35%;">
+    <img src="images/qt/tray.png" alt="托盘" style="width: 25%;">
 </div>
 </center>
 
@@ -22,16 +29,20 @@
     - 火山：免费注册，填写密钥🔑
     - **比较**，多个服务同时翻译，对比查看
 - [x] 支持截屏自动OCR识别并翻译
-    - 暂仅支持百度
-- [x] 提供多种打包格式，[这里下载](https://github.com/ldrfy/lfy/releases)
-    - archlinux：已经测试
-    - deb：ubuntu24.04上测试
-    - rpm：opensuse上测试
-    - flatpak：无需测试
+    - 支持百度
+    - 本地服务pytesseract
+- [x] 提供gtk和qt原生的两个，每种多种系统打包，[这里下载](https://github.com/ldrfy/lfy/releases)
+    - pip: windows11和linux测试，仅qt版本，直接终端输入 `pip install lfy` 即可安装，通过终端运行 `lfy` 即可运行，windows上国际化有些问题。
+    - archlinux：已经测试，并长期使用
+    - deb：ubuntu24.04 上测试
+    - rpm：fedora41 上测试
+    - rpm-suse：opensuse 上测试
+    - flatpak：无需测试，仅gtk版本
 - [x] 界面支持多国语言，使用 `gettext`
 - [x] 占用极小，不到 `0.2M`
 - [x] 复制，自动翻译并弹窗
-- [x] 支持 `gnome` 原生 `libadwaita`，简洁、美观！
+- [x] gtk版本支持 `gnome` 原生 `libadwaita`，简洁、美观！
+- [x] qt版本支持 kde 原生，通过pip支持所有系统，支持托盘图标。 
 
 
 ## 使用方法
