@@ -29,13 +29,13 @@ ubuntu 需要 `23.10` 或 `24.04`
 ### 编译工具 meson
 
 ```bash
-sudo pacman -S meson appstream-glib zip
+sudo pacman -S meson appstream-glib zip uzip
 ```
 
 ### 依赖：
 
 ```bash
-sudo pacman -S libadwaita python-gobject python-requests
+sudo pacman -S libadwaita python-gobject python-requests python-pyqt6 python-pillow qt6-svg
 ```
 
 
@@ -57,10 +57,21 @@ make uninstall
 
 以下全部为测试，修改的文件及时生效
 
+打包所有：
+
+```bash
+make release
+```
+
+
 #### pacman
 
 ```bash
+# qt版本
 make test-aur
+
+# gtk版本
+make BUILD_TYPE=gtk test-aur
 ```
 
 文件生成在 `./disk/*.pkg.tar.zst`
@@ -68,7 +79,10 @@ make test-aur
 安装
 
 ```bash
-sudo pacman -U ./disk/*.pkg.tar.zst
+sudo pacman -U ./disk/*-qt.pkg.tar.zst
+
+# gtk
+sudo pacman -U ./disk/*-gtk.pkg.tar.zst
 ```
 
 #### deb
@@ -80,7 +94,12 @@ sudo pacman -S dpkg
 ```
 
 ```bash
+
+# qt版本
 make test-deb
+
+# gtk版本
+make BUILD_TYPE=gtk test-deb
 ```
 
 文件生成在 `./disk/*.deb`
@@ -88,7 +107,41 @@ make test-deb
 安装
 
 ```bash
-sudo dpkg -i ./disk/*.deb
+sudo dpkg -i ./disk/*-qt.deb
+
+# gtk
+sudo dpkg -i ./disk/*-gtk.deb
+```
+
+
+#### rpm
+
+fedora 和 opensuse 依赖名字不一样，所以分别打包了
+
+工具
+
+```bash
+sudo pacman -S rpm-tools
+```
+
+```bash
+
+# qt版本
+make test-rpm
+
+# gtk版本
+make BUILD_TYPE=gtk test-rpm
+```
+
+文件生成在 `./disk/*.rpm`，opensuse系统的为 `./disk/*-suse.rpm`
+
+安装
+
+```bash
+sudo dpkg -i ./disk/*-qt.rpm
+
+# gtk
+sudo dpkg -i ./disk/*-gtk.rpm
 ```
 
 

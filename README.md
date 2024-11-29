@@ -21,25 +21,25 @@ qt 版本
 ## 优势：
 
 - [x] 多引擎支持
-    - bing：直接使用，无需代理
-    - google：直接使用，需要代理
-    - 百度：免费注册，填写密钥🔑
-    - 腾讯：免费注册，填写密钥🔑
-    - 有道：免费注册，填写密钥🔑
-    - 火山：免费注册，填写密钥🔑
+    - [bing](servers/t/bing.md)：直接使用，无需代理
+    - [google](servers/t/google.md)：直接使用，需要代理
+    - [百度](servers/t/baidu.md)：免费注册，填写密钥🔑
+    - [腾讯](servers/t/tencent.md)：免费注册，填写密钥🔑
+    - [火山](servers/t/huoshan.md)：免费注册，填写密钥🔑
+    - [阿里云](servers/t/aliyun.md)：免费注册，填写密钥🔑
     - **比较**，多个服务同时翻译，对比查看
 - [x] 支持截屏自动OCR识别并翻译
-    - 支持百度
-    - 本地服务pytesseract
+    - [百度](servers/o/baidu.md)：免费注册，填写密钥🔑
+    - [pytesseract](servers/o/pytesseract.md)：本地服务
 - [x] 提供gtk和qt原生的两个，每种多种系统打包，[这里下载](https://github.com/ldrfy/lfy/releases)
-    - pip: windows11和linux测试，仅qt版本，直接终端输入 `pip install lfy` 即可安装，通过终端运行 `lfy` 即可运行，windows上国际化有些问题。
+    - pip: windows11和linux测试，仅qt版本，直接终端输入 `pip install lfy` 即可安装，通过终端运行 `lfy` 即可运行，windows上国际化有些问题，需要自己设置环境变量 `LANG` `zh_CN`。
     - archlinux：已经测试，并长期使用
     - deb：ubuntu24.04 上测试
     - rpm：fedora41 上测试
     - rpm-suse：opensuse 上测试
     - flatpak：无需测试，仅gtk版本
 - [x] 界面支持多国语言，使用 `gettext`
-- [x] 占用极小，不到 `0.2M`
+- [x] 占用极小，不到 `0.1M`
 - [x] 复制，自动翻译并弹窗
 - [x] gtk版本支持 `gnome` 原生 `libadwaita`，简洁、美观！
 - [x] qt版本支持 kde 原生，通过pip支持所有系统，支持托盘图标。 
