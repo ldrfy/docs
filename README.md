@@ -3,17 +3,21 @@
 此为[ldr-translate](https://github.com/yuhldr/ldr-translate) 重构版， [ldr-translate](https://github.com/yuhldr/ldr-translate) 还能用，但是不再更新，旧系统可以使用它，还是挺好用的，但是我喜欢挑战新技术。
 
 <center>
+
 gtk 版本
-<div style="display: flex;">
-    <img src="images/main.png" alt="首页" style="width: 35%;">
-    <img src="images/preference.png" alt="设置1" style="width: 31%;">
-    <img src="images/server-preference.png" alt="设置2" style="width: 31%;">
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="images/gtk/main.png" alt="首页" style="width: 32%;">
+    <img src="images/gtk/preference.png" alt="设置" style="width: 32%;">
+    <img src="images/gtk/preference1.png" alt="设置1" style="width: 32%;">
 </div>
+
 qt 版本
-<div style="display: flex;">
-    <img src="images/qt/main.png" alt="首页" style="width: 36%;">
-    <img src="images/qt/preference.png" alt="设置1" style="width: 35%;">
-    <img src="images/qt/tray.png" alt="托盘" style="width: 25%;">
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="images/qt/main.png" alt="首页" style="width: 32%;">
+    <img src="images/qt/preference.png" alt="设置" style="width: 32%;">
+    <img src="images/qt/preference1.png" alt="设置1" style="width: 32%;">
 </div>
 </center>
 
