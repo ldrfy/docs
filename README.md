@@ -1,6 +1,6 @@
 # 兰译 lfy <img src="images/cool.ldr.lfy.svg" width = "36" height = "36" alt="兰译" align=center />
 
-此为[ldr-translate](https://github.com/yuhldr/ldr-translate) 重构版， [ldr-translate](https://github.com/yuhldr/ldr-translate) 还能用，但是不再更新，旧系统可以使用它，还是挺好用的，但是我喜欢挑战新技术。
+此为 [ldr-translate](https://github.com/yuhldr/ldr-translate) 重构版， [ldr-translate](https://github.com/yuhldr/ldr-translate) 还能用，但是不再更新，旧系统可以使用它，还是挺好用的，但是我喜欢挑战新技术。
 
 <center>
 
@@ -25,6 +25,7 @@ qt 版本
 ## 优势：
 
 - [x] 多引擎支持
+    - [⭐ ollama](servers/t/ollama.md)： 推荐，可以使用多种本地大模型、免费、安全
     - [bing](servers/t/bing.md)：直接使用，无需代理
     - [google](servers/t/google.md)：直接使用，需要代理
     - [百度](servers/t/baidu.md)：免费注册，填写密钥🔑
